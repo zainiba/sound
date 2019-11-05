@@ -4,6 +4,7 @@ let playing;
 let colour = 50;
 let env;
 let button;
+//let gost;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -19,6 +20,17 @@ function setup() {
   osc.freq(400);
   osc.amp(env);
 
+  button = createButton('Start');
+  button.mousePressed(gost);
+
+
+}
+
+function draw() {
+
+}
+
+function gost() {
   button = createButton('Sound 1');
   button.mousePressed(sound1);
 
@@ -34,30 +46,29 @@ function setup() {
   button = createButton('Sound 5');
   button.mousePressed(sound5);
 
-
 }
-
-function draw() {
-
-}
-
 function sound1() {
   env.play();
+  background(66,10,10)
 }
 function sound2() {
   env.play();
   osc.freq(500);
+  background(86,10,10)
 }
 function sound3() {
   env.play();
   osc.freq(600);
+  background(106,10,10)
 }
 function sound4() {
+  background(126,10,10)
   env.play();
   osc.freq(700);
 
 }
 function sound5() {
+  background(166,10,10)
   env.play();
   osc.freq(800);
 }
